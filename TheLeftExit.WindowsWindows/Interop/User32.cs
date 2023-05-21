@@ -1,4 +1,5 @@
 ﻿using System.Runtime.InteropServices;
+using System.Runtime.Versioning;
 
 public unsafe static partial class User32
 {
@@ -51,4 +52,7 @@ public unsafe static partial class User32
 
     [LibraryImport("user32.dll")]
     public static partial void PostQuitMessage(int nExitCode);
+
+    [LibraryImport("user32.dll")]
+    public static partial nint GetSysColorBrush(SYS_COLOR_INDEX nIndex);
 }
